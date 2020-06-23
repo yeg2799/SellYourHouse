@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#22242E"
+    tools:context=".KayitOlEkran">
+
+    <LinearLayout
+        android:id="@+id/baslik"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/kayittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:text="Kayıt Ol"
+            android:textColor="#4EB8CE"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/Adsoyadtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Ad-Soyad:"
+            android:textColor="#4EB8CE"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/adsoyadgiris"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Adınızı Soyadınızı Giriniz.."
+            android:inputType="textPersonName"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/cizgi1"
+            android:layout_width="284dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="50dp"
+            android:background="#4EB8CE" />
+
+        <TextView
+            android:id="@+id/KullaniciAditext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="E-mail(KullaniciAdi):"
+            android:textColor="#4EB8CE"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/KullaniciAdigiris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Kullanıcı Adınızı Giriniz.."
+            android:inputType="textPersonName"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/cizgi2"
+            android:layout_width="284dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="50dp"
+            android:background="#4EB8CE" />
+
+        <TextView
+            android:id="@+id/parolatext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Parola:"
+            android:textColor="#4EB8CE"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/SifreGiris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@null"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text="Parola"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/cizgi3"
+            android:layout_width="284dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="50dp"
+            android:background="#4EB8CE" />
+
+        <TextView
+            android:id="@+id/parolatekrartext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Parola Tekrar:"
+            android:textColor="#4EB8CE"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/sifretekrargiris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@null"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text="Parola"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/cizgi4"
+            android:layout_width="284dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="50dp"
+            android:background="#4EB8CE" />
+
+        <TextView
+            android:id="@+id/cepnotxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Telefon No:"
+            android:textColor="#4EB8CE"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/telefonnogiris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Telefon Numaranızı Giriniz.."
+            android:inputType="phone"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/cizgi5"
+            android:layout_width="284dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="50dp"
+            android:background="#4EB8CE" />
+
+        <Button
+            android:id="@+id/kayitol"
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:background="#4EB8CE"
+            android:onClick="kayitol"
+            android:text="kAYIT OL" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
