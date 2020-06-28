@@ -98,9 +98,10 @@
             android:layout_marginLeft="50dp"
             android:background="@null"
             android:ems="10"
+            android:hint="Şifrenizi Giriniz.."
             android:inputType="textPassword"
-            android:text="Parola"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light" />
 
         <TextView
             android:id="@+id/cizgi3"
@@ -126,9 +127,10 @@
             android:layout_marginLeft="50dp"
             android:background="@null"
             android:ems="10"
+            android:hint="Şifrenizi Tekrar Giriniz.."
             android:inputType="textPassword"
-            android:text="Parola"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light" />
 
         <TextView
             android:id="@+id/cizgi4"

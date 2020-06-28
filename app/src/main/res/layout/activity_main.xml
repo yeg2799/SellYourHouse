@@ -46,7 +46,9 @@
                 android:background="@null"
                 android:ems="10"
                 android:hint="Kullanıcı Adınızı Giriniz.."
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="#FAF5F5"
+                android:textColorHint="#FFFFFF" />
         </LinearLayout>
 
         <TextView
@@ -78,7 +80,9 @@
                 android:background="@null"
                 android:ems="10"
                 android:hint="Parolanızı Giriniz.."
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="#FAF5F5"
+                android:textColorHint="#FFFFFF" />
 
         </LinearLayout>
 

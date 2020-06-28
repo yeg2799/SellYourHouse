@@ -24,7 +24,7 @@ public class KayitOlEkran extends AppCompatActivity {
     //Veritabanına Kayıt Edilecek
     public void kayitol(View view) {
 
-
+            DatabaseYardimcisi databaseYardimcisi = new DatabaseYardimcisi(getApplicationContext());
             AdSoyad = findViewById(R.id.adsoyadgiris);
             KullaniciAdi = findViewById(R.id.KullaniciAdigiris);
             Sifre = findViewById(R.id.SifreGiris);
@@ -33,31 +33,49 @@ public class KayitOlEkran extends AppCompatActivity {
 
             String Adsoyadstr = AdSoyad.getText().toString();
             String KullaniciAdistr = KullaniciAdi.getText().toString();
-            String Sifrestr = Sifre.getText().toString();
-            String SifreTekrarstr = SifreTekrar.getText().toString();
-            String TelefonNostr = TelefonNo.getText().toString();
+            //Aynı kullanıcı adı olup olmadığını kontrol ediyor
+          String kullanicikontrol= databaseYardimcisi.kullaniciadkontrol(KullaniciAdistr);
+          if (kullanicikontrol=="Hata")
+          {
+              Toast.makeText(KayitOlEkran.this, "Kullanıcı Adı Kayıtlı Lütfen Farklı Bir Kullanıcı Adı Belirleyiniz..", Toast.LENGTH_LONG).show();
+          }
+          //aynı kullanıcı adı yoksa buraya girip kullanıcı kayıt ediliyor
+          else
+          {
+              String Sifrestr = Sifre.getText().toString();
+              String SifreTekrarstr = SifreTekrar.getText().toString();
+              String TelefonNostr = TelefonNo.getText().toString();
 
-            if (!Sifrestr.equals(SifreTekrarstr)) {
-                Toast.makeText(KayitOlEkran.this, "Parolalar Eşleşmiyor Kontrol Ediniz.", Toast.LENGTH_LONG).show();
+              if (!Sifrestr.equals(SifreTekrarstr)) {
+                  Toast.makeText(KayitOlEkran.this, "Parolalar Eşleşmiyor Kontrol Ediniz.", Toast.LENGTH_LONG).show();
 
-            }
-            else    {
+              }
+              else    {
 
-                DatabaseYardimcisi databaseYardimcisi = new DatabaseYardimcisi(getApplicationContext());
-                Kullanicilar kullanicilar = new Kullanicilar();
-                kullanicilar.setAdSoyad(Adsoyadstr);
-                kullanicilar.setEmail(KullaniciAdistr);
-                kullanicilar.setSifre(Sifrestr);
-                kullanicilar.setTelefonNo(TelefonNostr);
 
-                long id= databaseYardimcisi.kullaniciekle(kullanicilar);
-                if (id>0) {
-                    Toast.makeText(getApplicationContext(), "Kayıt Başarıyla Oluşturuldu.."+id, Toast.LENGTH_LONG).show();
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "Kayıt Başarısız..", Toast.LENGTH_LONG).show();
-                }
+                  Kullanicilar kullanicilar = new Kullanicilar();
+
+                  kullanicilar.setAdSoyad(Adsoyadstr);
+                  kullanicilar.setEmail(KullaniciAdistr);
+                  kullanicilar.setSifre(Sifrestr);
+                  kullanicilar.setTelefonNo(TelefonNostr);
+
+                  long id= databaseYardimcisi.kullaniciekle(kullanicilar);
+
+                  if (id>0) {
+                      Toast.makeText(getApplicationContext(), "Kayıt Başarıyla Oluşturuldu.."+id, Toast.LENGTH_LONG).show();
+                      AdSoyad.setText("");
+                      KullaniciAdi.setText("");
+                      Sifre.setText("");
+                      SifreTekrar.setText("");
+                      TelefonNo.setText("");
+                  }
+                  else
+                  {
+                      Toast.makeText(getApplicationContext(), "Kayıt Başarısız..", Toast.LENGTH_LONG).show();
+                  }
+          }
+
             }
 
 

@@ -1,7 +1,9 @@
 package com.example.a173301071_yeg;
 
 public class Kullanicilar {
+
     String AdSoyad,Email,Sifre,TelefonNo;
+
     public void setAdSoyad(String adSoyad)
     {
        this.AdSoyad = adSoyad;
@@ -27,7 +29,9 @@ public class Kullanicilar {
     {
         return this.Sifre;
     }
-    public void setTelefonNo(String telefonNo) {
+
+    public void setTelefonNo(String telefonNo)
+    {
         this.TelefonNo = telefonNo;
     }
 
